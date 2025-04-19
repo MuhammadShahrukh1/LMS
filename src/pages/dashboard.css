@@ -1,0 +1,13 @@
+.overview{
+    width: calc(100% - 300px);
+    position: relative;
+    left: 280px;
+}
+
+@media only screen and (max-width:767px) {
+    .overview{
+        width: 100%;
+        position: static;
+        z-index: 1;
+    }
+}
