@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import supabase from "./Database";
 const PageNavigate = useNavigate();
+import Dashboard from "../pages/Dashboard";
+import Login from '../pages/login'
 
-async function checkSection(){
-    try {
+async function CheckSection(){
+        try {
         const {data, error} = await supabase.auth.getSession();
         const authPage = ['/index.html', '/login.html', '/'];
         const currentPath = window.location.pathname;
@@ -24,6 +26,13 @@ async function checkSection(){
         if(error) throw error
     } catch (error) {
         console.log(error)
-    }
+ 
+ }
+
+ return(
+    data.session ? <Dashboard /> : <Login />
+ )
+
+
 }
-export default checkSection
+export default CheckSection

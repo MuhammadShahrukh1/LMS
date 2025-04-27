@@ -16,6 +16,7 @@ const Signup = () => {
     const submitButton = async (event) => {
         setLoading(true)
         event.preventDefault();
+        console.log(data)
         try {
             const { data, error } = await supabase.auth.signUp(
                 {
@@ -90,7 +91,7 @@ const Signup = () => {
                                     </div>
                                     <div className="flex items-start mt-0">
                                         <div className="flex items-center h-5">
-                                            <input id="terms" aria-describedby="terms" type="checkbox" ref={inputRef} checked={checked} onChange={() => setChecked(!checked)}
+                                            <input id="terms" aria-describedby="terms" type="checkbox" checked={checked} onChange={() => setChecked(!checked)}
                                                 className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
                                                 required />
                                         </div>

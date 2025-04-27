@@ -2,7 +2,8 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import CardItem from '../components/CardItem';
 import './dashboard.css'
-// import checkSection from '../lib/checkSession';
+import supabase from '../lib/Database';
+
 
 const Dashboard = () => {
   let currentuser = JSON.parse(localStorage.getItem('currentUser'));
@@ -12,7 +13,6 @@ const Dashboard = () => {
       <div className="px-4 py-20 md:p-6 overview md:w-full">
         <div className="md:flex justify-between items-center mb-6 hidden">
           <h1 className="text-2xl font-bold p-3 text-blue-500">Customer Dashboard</h1>
-          {/* <button className="text-blue-600 hover:underline">Sign Out</button> */}
         </div>
 
         <div className="bg-white mt-3 md:mt-0 px-4 py-6 mb-6 rounded-lg shadow-lg">

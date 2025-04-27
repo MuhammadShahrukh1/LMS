@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link  } from 'react-router-dom';
 import { Home, FileText, PlusCircle, User, LogOut } from 'lucide-react';
 import { faHamburger } from '@fortawesome/free-solid-svg-icons/faHamburger';
 import { Dialog, DialogPanel } from '@headlessui/react'
@@ -18,11 +18,11 @@ const Sidebar = (props) => {
       <div className="hidden md:block w-64 min-h-screen bg-white border-r border-white rounded-r-md px-4 py-6 fixed shadow shadow-emerald-900">
         <h2 className="text-2xl font-bold text-blue-600 mb-6 ml-4">Customer Portal</h2>
         <nav className="flex flex-col gap-2 text-gray-700 bg-white">
-          <a className='flex items-center gap-3 p-[0.6rem] no-underline rounded-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300' ><Home size={18} /> Dashboard</a>
-          <a className='flex items-center gap-3 p-[0.6rem] no-underline rounded-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300'><FileText size={18} /> My Loan Requests</a>
-          <a className='flex items-center gap-3 p-[0.6rem] no-underline rounded-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300'><PlusCircle size={18} /> New Loan</a>
-          <a className='flex items-center gap-3 p-[0.6rem] no-underline rounded-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300'><User size={18} /> Profile</a>
-          <a className='flex flex-end items-center gap-3 p-[0.6rem] no-underline roundec-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300'><LogOut size={18} />Sign Out</a>
+          <Link to='/dashboard' className='flex items-center gap-3 p-[0.6rem] no-underline rounded-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300 cursor-pointer' ><Home size={18} /> Dashboard</Link>
+          <Link to='/my-request' className='flex items-center gap-3 p-[0.6rem] no-underline rounded-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300 cursor-pointer'><FileText size={18} /> My Loan Requests</Link>
+          <Link to='/loan-request' className='flex items-center gap-3 p-[0.6rem] no-underline rounded-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300 cursor-pointer'><PlusCircle size={18} /> New Loan</Link>
+          <a className='flex items-center gap-3 p-[0.6rem] no-underline rounded-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300 cursor-pointer'><User size={18} /> Profile</a>
+          <a className='flex flex-end items-center gap-3 p-[0.6rem] no-underline roundec-r-md hover:text-gray-100 hover:bg-blue-500 hover:font-bold hover:border-l-8 hover:border-solid hover:border-blue-300 cursor-pointer'><LogOut size={18} />Sign Out</a>
         </nav>
       </div>
 

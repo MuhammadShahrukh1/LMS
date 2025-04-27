@@ -60,22 +60,22 @@ className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:
 </section>  */}
 
 const Home = () => {
-    const [openLogin, setOpenLogin] = useState(false);
-    const [openSignup, setOpenSignup] = useState(false)
-    const handleCancelLogin = () => {
-        setOpenLogin(false);
-    };
-    const handleCancelSignup = () => {
-        setOpenSignup(false)
-    }
+    // const [openLogin, setOpenLogin] = useState(false);
+    // const [openSignup, setOpenSignup] = useState(false)
+    // const handleCancelLogin = () => {
+    //     setOpenLogin(false);
+    // };
+    // const handleCancelSignup = () => {
+    //     setOpenSignup(false)
+    // }
     return (
         <>
             <div className='flex flex-col justify-center items-center h-[100vh] bg-[#e1ebfb] p-2'>
                 <h1 className='text-center text-5xl font-bold mb-4 text-[#1e3caf]'>Welcome To Our Plateform</h1>
                 <p className='text-center text-xl text-[#7d8386]'>Experince the best service with our cutting-edge solution.</p>
                 <div className='flex gap-8 sm:gap-12'>
-                    <Link to='/login'><button className='cursor-pointer bg-blue-600 text-white py-3 px-8 rounded-lg text-2xl font-normal hover:bg-white hover:text-blue-600 mt-8 shadow-xl' onClick={() => setOpenLogin(true)}>Login</button></Link>
-                    <Link to='/signup'><button className='cursor-pointer bg-white text-blue-600 py-3 px-8 rounded-lg text-2xl font-normal hover:bg-blue-600 hover:text-white mt-8 shadow-xl' onClick={() => setOpenSignup(true)}>Signup</button></Link>
+                    <Link to='/login'><button className='cursor-pointer bg-blue-600 text-white py-3 px-8 rounded-lg text-2xl font-normal hover:bg-white hover:text-blue-600 mt-8 shadow-xl'>Login</button></Link>
+                    <Link to='/signup'><button className='cursor-pointer bg-white text-blue-600 py-3 px-8 rounded-lg text-2xl font-normal hover:bg-blue-600 hover:text-white mt-8 shadow-xl'>Signup</button></Link>
                 </div>
                 {/* <Modal open={openLogin} onCancel={handleCancelLogin} footer={[]}>
                     <Login />
